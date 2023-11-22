@@ -1,0 +1,15 @@
+Difference between http 1.1 and http/2
+
+http1.1
+1. transfer all the request & response in plain text message from
+2. head of line blocking 
+	TCP connection block all other request until the response doesn't receive
+3. All the information related to header files is repeated in every request 
+4. It compress the data by itself
+
+
+http/2
+1. transfer all the request & response in binary framing protocal
+2. paralley send the request and receive the response 
+3. one connection for multiple request 
+4. It using PUSH frame to  send css & js file also 

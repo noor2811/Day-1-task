@@ -1,0 +1,75 @@
+Objects & Its Internal Representation in Js
+
+	Object is the most important datatype in js. eventhough it is a datatype ,it differs from other datatype.
+other datatype like Number,boolean ,string...etc, can store one value at a time but object in js, can store more than one value,and
+also it can store datatype variables.
+we may conclude that object is unordered collection of related data
+
+ for example
+
+	var student={name:"noor",Batch:52};
+here student is object , it contains a string and Number
+
+Object in js, associate with properties that defines the object in above example name & batch is the properties of object student
+it defined as "key:value" pair; where key can a variable or function;
+we can access any of the properties of object by "."notion
+
+	objectName.objectProperty;
+	
+	console.log(student.name); //noor;
+we can add more properties ,delete properties ,use this properties to any other object if it is needed
+
+Declaration of Object 
+	
+	1. Object with object literals;
+		
+		var objectName={key1:value1,key2:value};
+	
+		it is the simplest method create an object in js.
+ 
+	2. Object Using Constructor Function
+		
+		constructor Function allows to creat Multiple object with same set of properties with differren value using "new" keyword;
+	
+		for ex:
+		
+		function Bike(name,model){
+		this.name=name;
+		this.model=model;
+			}
+		let bike1= new Bike("hero", 2011);
+		let bike2= new Bike( "FZ",2015);
+
+		here constuctor function Bike allows the Objects (bike1 &bike2), access itself;
+	
+	3. Object with new keyword
+		
+		var objName= new Object(); in this way can create object and we can add properties to it;
+
+		objName.objProperties=value;
+		
+		for ex:
+
+			var emp= new Object();
+			emp.name="noor";	
+			emp.designation="XXXX";
+			emp.salary=000000;
+		like that we can add more properties;
+
+	4. Object using create method
+		
+		In this method , we can use one object as template  to other object 
+
+		let food={ type:"non-veg", display: function()
+			{	
+				console.log(this.type);
+				}
+		let mocktail =Object.create(food);
+		mocktail.type="drinks";
+		moctail.display();
+	
+	
+	
+	
+
+
